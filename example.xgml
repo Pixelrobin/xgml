@@ -1,0 +1,37 @@
+object "obj_main" {
+
+    #prop sprite gm_assets[ "spr_main" ]
+    
+    time = 0
+
+    #event create
+    alarm[ 0 ] = game_get_speed( gamespeed_fps );
+
+    #event alarm 0
+    time ++;
+    alarm[ 0 ] = game_get_speed( gamespeed_fps );
+
+    #event draw
+    draw_self();
+    draw_text( 0, 0, string( time ) );
+
+}
+
+// Translates to
+new gms.object( "obj_main", {
+
+    prop: {
+
+        sprite: gms.assets[ "spr_main" ]
+
+    }
+
+    event: {
+
+        create: "time = 0; alarm[ 0 ] = game_get_speed( gamespeed_fps );"
+        alarm_0: "time ++; alarm[ 0 ] = game_get_speed( gamespeed_fps );"
+        draw: "draw_self; draw_text( 0, 0, string( time ) );"
+
+    }
+
+} );
