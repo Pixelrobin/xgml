@@ -1,7 +1,0 @@
-// Place your settings in this file to overwrite default and user settings.
-{
-    "markdown.preview.scrollEditorWithPreview": false,
-    "markdown.preview.scrollPreviewWithEditorSelection": false,
-    "cursor-ruler.color": "#2b2b2b",
-    "cursor-ruler.width": "2px"
-}
