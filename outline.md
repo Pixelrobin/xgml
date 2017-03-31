@@ -93,27 +93,15 @@
         // Custom variables
         foo = 0;
 
-        #event create }
+        #event create
+        // Custom variables are inserted before create event code
+        show_debug_message( foo );
 
-            // Parakeet-like events
-            // Custom variables are inserted before create event code
-            show_debug_message( foo );
+        #event step
+        foo ++;
 
-        }
-
-        #event step {
-
-            foo ++;
-
-        }
-
-        #event draw {
-
-            draw_text( 0, 0, foo );
-
-        }
-    
-    }
+        #event draw
+        draw_text( 0, 0, foo );
 
         // All the events (oh boy)
         #event create
@@ -190,7 +178,7 @@
     }
 
 ## Defining Scripts
-    #script "script_name( a, b, c, d? )" {
+    script "script_name( a, b, c, d? )" {
 
         // Use argument names instead of argumentn
         // Optional arguments are passed as 'undefined' if not added
@@ -200,7 +188,7 @@
     }
 
 ## Defining Sprites
-    #sprite "sprite_name" {
+    sprite "sprite_name" {
 
         #prop width                   64
         #prop height                  64
@@ -231,11 +219,4 @@
 
     }
 
-## Defining Tilesets
-    #tileset "tileset_name" {
-
-        #prop sprite
-
-    }
-
-## Defining Sounds
+## Etc...
